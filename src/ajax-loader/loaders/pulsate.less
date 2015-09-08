@@ -1,0 +1,45 @@
+// Based in signal loader from http://blog.pexels.com/css-only-loaders/
+
+@loaderBackground: rgba(230, 230, 230, 0.5);
+@loaderMain: #158cba;
+@loaderBorder: 6px solid @loaderMain;
+@loaderSize: 50px;
+@loaderSpeed: 0.8s;
+
+.ajax-loader-container {
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1035;
+  background-color: @loaderBackground;
+
+  .ajax-loader {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: @loaderBorder;
+    border-radius: @loaderSize;
+    height: @loaderSize;
+    margin: -@loaderSize/2 0 0 -@loaderSize/2;
+    width: @loaderSize;
+
+    animation: pulsate @loaderSpeed ease-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes pulsate {
+      0% {
+        transform: scale(.1);
+        opacity: 0.0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+  }
+}

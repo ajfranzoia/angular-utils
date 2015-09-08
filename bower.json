@@ -1,0 +1,17 @@
+{
+  "name": "angular-utils",
+  "version": "0.9",
+  "private": true,
+  "main": [
+    "dist/angular-utils.js"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-resource": "~1.4.5",
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.5"
+  }
+}
